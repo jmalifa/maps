@@ -1,13 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
 
 	<title>New York City</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
+	<script type="text/javascript" src="javascript/gmap3.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
-	<script src="javascript/gmap3.js"></script>
+
+	
+	
 </head>
 <body>
-	<div class="row">
-		<div class="small-12 columns bg">
+<div class="row">
+	<div class="small-12 small-centered columns bg">
 		<div class="row">
 			<div class="small-6 columns">
 			</div>
@@ -17,27 +23,48 @@
 		</div>
 		<div class="row">
 			<div class="small-12 small-centered columns bg2">
-				<div class="row>">
-					<div class="small-2 columns">
-						<p>Hey</p>
-					</div>
-					<div class="small-2 columns">
-						<p>Hey</p>
-					</div>
-					<div class="small-8 columns">
-						<div id="map" class=map-class>
-						</div>
-
+				<div class="small-2 columns">
+					<img src="images/park.jpg"></img>
+					<img src="images/liberty.jpg"></img>
+					<img src="images/brooklyn.jpg"></img>
+					<img src="images/empire.jpg"></img>
+					<img src="images/times.jpg"></img>
+					
+				</div>
+				<div class="small-2 columns">
+					<p>New York is a state in the Northeastern and Mid-Atlantic regions of the United States. New York is the 27th-most extensive, the third-most populous, and the seventh-most densely populated of the 50 United States. New York is bordered by New Jersey and Pennsylvania to the south and by Connecticut, Massachusetts, and Vermont to the east. The state has a maritime border with Rhode Island east of Long Island, as well as an international border with the Canadian provinces of Ontario to the west and north. </p>
+					
+				</div>
+				<div class="small-8 columns">
+					<div id="map">
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>	
 	</div>
+</div>
 
-<sript>
-	$(#map).gmap3(){
-	map:3
-}
+
+<script>
+$("#map").gmap3({
+ map:{
+    options:{
+     center:[40.703871, -73.993371],
+     zoom:15,
+     panControl: true,
+     zoomControl: true,
+     streetViewControl: true,
+     mapTypeControl: true,
+     navigationControl: true	
+     
+    }
+},
+    marker:{
+    latLng: [40.703871, -73.993371	],
+
+ }
+});
+</script>
+
 </body>
 </html>
